@@ -6,23 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     <title>Rooftop Movies</title>
 </head>
 
 <body>
     <div class="main">
         <div class="logos">
-            <img src="helicopter.gif" id="heli">
-            <img src="logo.png" id="logo">
+            <img src="helicopter.gif" id="heli" alt="helicopter gif">
+            <img src="logo.png" id="logo" alt="Rooftop Movies Logo">
         </div>
-        <form class="submit">
-            <input type="text" id="search-input" placeholder="Search for a movie...">
-            <input type="image" src="searchicon.gif" id="search-icon">
-        </form>
+        <div class="submit-elements">
+            <input type="image" src="x-button.png" id="x-button" class="hidden">
+            <form class="submit-form">
+                <label for="search-input"> Search Bar</label>
+                <input type="text" id="search-input" placeholder="Search for a movie...">
+                <input type="image" src="searchicon.gif" id="search-icon" alt="magnifying glass">
+            </form>
+        </div>
         <div class="movies-grid">
 
         </div>
-        <button class="load-more-movies-btn hidden" id="load-more-movies-btn"></button>
+        <button class="load-more-movies-btn hidden" id="load-more-movies-btn"> Load More </button>
+        <div class="modal-backdrop hidden"></div>
     </div>
     <script src="script.js"></script>
 </body>

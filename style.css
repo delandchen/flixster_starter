@@ -1,5 +1,10 @@
 body {
     margin: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+label {
+    display: none;
 }
 
 .main {
@@ -26,29 +31,50 @@ body {
     width: 25%;
 }
 
-.submit {
+.submit-elements {
     display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: auto;
+    justify-content: center;
+}
+
+.submit-form {
+    position: relative;
+    display: flex;
+    flex: 1;
     flex-direction: row;
     margin: auto;
     margin-top: 2vh;
+    left: 45px;
 }
 
 #search-input {
-    position: relative;
+    margin: auto;
     width: 25vw;
     height: 3vh;
     border-radius: 20px;
     text-align: center;
-    left: 48px;
     border: 2px solid rgb(69, 193, 205);
+}
+
+
+#x-button {
+    position: relative;
+    margin: auto;
+    height: 20px;
+    width: 20px;
+    z-index: 1;
+    left: 20px;
+    top: 8px;
+
 }
 
 #search-icon {
     position: relative;
+    margin: auto;
     height: 64px;
     width: 96px;
-    bottom: 15px;
-    left: 42px;
 }
 
 .movies-grid {
@@ -85,14 +111,37 @@ body {
 }
 
 .load-more-movies-btn {
+    display: flex;
     position: relative;
     bottom: 15px;
     margin: auto;
-    height: 20px;
-    width: 20px;
+    margin-bottom: 25px;
+    padding: 10px;
+    height: 35px;
+    width: 8vw;
+    justify-content: center;
 }
 
+.modal-backdrop {
+    position: fixed;
+    display: flex;
+    background-color: black;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.modal {
+    position: fixed;
+    top: 25vh;
+    left: 36vw;
+    margin: auto;
+}
+
+
 /* Class Attributes */
-#hidden {
+.hidden {
     display: none;
 }
