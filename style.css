@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Kdam Thmor Pro', sans-serif;
@@ -7,13 +8,18 @@ label {
     display: none;
 }
 
+/*****************/
+
+
 .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ffd166;
+    background-color: #DEF2F1;
 }
 
+
+/* Graphic CSS */
 .logos {
     display: flex;
     flex-direction: column;
@@ -31,11 +37,17 @@ label {
     width: 25%;
 }
 
+/*****************/
+
+
+/* Search bar related CSS */
 .submit-elements {
     display: flex;
+    position: relative;
     flex-direction: row;
     flex: 1;
     margin: auto;
+    right: 10px;
     justify-content: center;
 }
 
@@ -44,7 +56,6 @@ label {
     display: flex;
     flex: 1;
     flex-direction: row;
-    margin: auto;
     margin-top: 2vh;
     left: 45px;
 }
@@ -58,13 +69,11 @@ label {
     border: 2px solid rgb(69, 193, 205);
 }
 
-
-#x-button {
+#close-search-btn {
     position: relative;
     margin: auto;
     height: 20px;
     width: 20px;
-    z-index: 1;
     left: 20px;
     top: 8px;
 
@@ -77,6 +86,10 @@ label {
     width: 96px;
 }
 
+/*****************/
+
+
+/* Movie Display CSS */
 .movies-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -112,36 +125,60 @@ label {
 
 .load-more-movies-btn {
     display: flex;
-    position: relative;
-    bottom: 15px;
     margin: auto;
-    margin-bottom: 25px;
+    margin-bottom: 45px;
     padding: 10px;
     height: 35px;
     width: 8vw;
     justify-content: center;
+    align-items: center;
 }
 
+/*****************/
+
+
+/* Modal CSS */
 .modal-backdrop {
     position: fixed;
     display: flex;
-    background-color: black;
-    opacity: .5;
+    background-color: rgba(0, 0, 0, .5);
     top: 0;
     left: 0;
-    min-height: 100vh;
-    min-width: 100vw;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
 }
 
-.modal {
-    position: fixed;
-    top: 25vh;
-    left: 36vw;
+.modal-content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #3AAFA9;
+    padding: 40px;
+    height: 50vh;
+    width: 70vw;
+    border-radius: 20px;
+}
+
+.modal-video {
     margin: auto;
 }
+
+.modal-title {
+    margin: auto;
+}
+
+.modal-details {
+    margin: auto;
+}
+
+/*****************/
 
 
 /* Class Attributes */
 .hidden {
-    display: none;
+    visibility: hidden;
 }
+
+/*****************/
