@@ -155,9 +155,16 @@ const displayMovies = (arr) => {
 
     // Apply event listener to every element with the class "movie-card"
     document.querySelectorAll(".movie-card").forEach(
-        index => index.addEventListener("click",
-            displayModal
-        ));
+        (index) => {
+            // Add Event listeners for a click and an 'Enter' keypress for accessability
+            index.addEventListener("click", displayModal);
+            index.addEventListener("keypress", function (e) {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    index.click();
+                }
+            });
+        })
 
 
     // Show the 'load-more-movies-btn' button
@@ -171,9 +178,9 @@ const createMovieCard = (obj) => {
     let title = obj.title;
     let votes = obj.vote_average;
 
-    // Add movie card to display div
+    // Add movie card to display div        
     movieDisplayElement.innerHTML +=
-        `<div class="movie-card" id="${movieId}"> 
+        `<div class="movie-card" id="${movieId}" tabindex=0 role="button"> 
         <img class="movie-poster" src=${POSTER_PATH + moviePosterPath} alt="${title}"> 
         <h2 class="movie-title" id="${movieId}"> ${title} </h2>
         <h2 class="movie-votes"> ${votes} / 10 </h2>
